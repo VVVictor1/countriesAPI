@@ -10,7 +10,8 @@ function App() {
   const fetchCountryInfo = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`http://localhost:5000/users/${countryInput}`);
+      const response = await fetch(`/users/${countryInput}`);
+
 
       if (response.ok) {
         const data = await response.json();
